@@ -1,0 +1,76 @@
+<div class="container">
+    <dl class="col-md-6 dl-horizontal">
+        <dt></dt>
+        <dd>
+            <button type="button"
+                    class="btn btn-success"
+                    style="min-width:120px;"
+                    (click)="startButton_Click()">
+                Start
+            </button>
+        </dd>
+        <dt>
+            OrderID:
+        </dt>
+        <dd>
+            <wj-combo-box [isEditable]="false"
+                          [itemsSource]="orders"
+                          [displayMemberPath]="'OrderID'">
+            </wj-combo-box>
+        </dd>
+        <dt>
+            Freight:
+        <dd>
+            <wj-input-number [required]="false"
+                             [(value)]="currentItem.Freight">
+            </wj-input-number>
+        </dd>
+    </dl>
+ 
+    <dl class="col-md-6 dl-horizontal">
+        <dt>
+            Customer:
+        </dt>
+        <dd>
+            <wj-combo-box [isEditable]="false"
+                          [itemsSource]="customers"
+                          [displayMemberPath]="'CompanyName'">
+            </wj-combo-box>
+        </dd>
+        <dt>
+            Order Dates:
+        </dt>
+        <dd>
+            <wj-input-date [required]="false"
+                           [(value)]="currentItem.OrderDate">
+            </wj-input-date>
+        </dd>
+        <dt>
+            Shipped Dates:
+        </dt>
+        <dd>
+            <wj-input-date [required]="false"
+                           [(value)]="currentItem.ShippedDate">
+            </wj-input-date>
+        </dd>
+    </dl>
+ 
+    <wj-flex-grid #flex class="grid" [itemsSource]="details">
+        <wj-flex-grid-column [header]="'Product ID'" [binding]="'ProductID'" width="*"></wj-flex-grid-column>
+        <wj-flex-grid-column [header]="'Quantity'" [binding]="'Quantity'" width="*"></wj-flex-grid-column>
+        <wj-flex-grid-column [header]="'Discount'" [binding]="'Discount'" width="*" format="p0"></wj-flex-grid-column>
+        <wj-flex-grid-column [header]="'Cost Per Unit'" [binding]="'UnitPrice'" width="*" format="c2"></wj-flex-grid-column>
+    </wj-flex-grid>
+ 
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Query resources
+        </div>
+        <div style="font-size:75%;" class="panel-body">
+            <div class="text-muted" *ngFor="#qh of queryResources, #index=index">
+                ({{ index }}) {{ qh.table }}: <a [href]="qh.url">{{ qh.url }}</a>
+            </div>
+        </div>
+    </div>
+ 
+</div>   

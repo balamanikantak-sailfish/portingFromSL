@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Services Quick Start example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="styles.css">
+
+	<!-- IE required polyfills, in this exact order -->
+	<script src="node_modules/es6-shim/es6-shim.min.js"></script>
+	<script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+	<script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+	<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="node_modules/rxjs/bundles/Rx.js"></script>
+
+	<script>
+		System.config({
+			packages: {
+				'scripts': {
+					defaultExtension: 'js',
+				},
+				'app': {
+					defaultExtension: 'js',
+				}
+			},
+		});
+	</script>
+	<!-- End of run-time settings -->
+	<script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+	<script src="node_modules/angular2/bundles/router.dev.js"></script>
+	<script src="node_modules/angular2/bundles/http.dev.js"></script>
+
+	<!-- Wijmo -->
+	<script src="scripts/vendor/wijmo.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.odata.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.input.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.grid.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.grid.filter.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.grid.grouppanel.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.grid.detail.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.grid.xlsx.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.chart.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.chart.analytics.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.chart.annotation.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.chart.interaction.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.chart.animation.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.gauge.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.xlsx.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.pdf.min.js" type="text/javascript"></script>
+	<script src="scripts/vendor/wijmo.grid.pdf.min.js" type="text/javascript"></script>
+
+
+	<!-- Styles -->
+	<link href="styles/vendor/wijmo.min.css" rel="stylesheet" />
+  <link href="app.css" rel="stylesheet" />
+	<link href="styles/vendor/wijmo.theme.material.indigo-blue.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  	<script>
+		System.import('./app/main');
+	</script>
+  </head>
+
+  <!-- 3. Display the application -->
+  <body>
+    
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <h1>
+                DataServices QuickStart Samples
+            </h1>
+            <p>
+                This is an HTML5 version of a classic Microsoft Silverlight sample available on
+                <a href="http://samples.msdn.microsoft.com/Silverlight/SampleBrowser/#/?sref=DataServicesQuickStart">MSDN</a>.
+                To see the original Silverlight sample, click
+                <a href="http://samples.msdn.microsoft.com/Silverlight/SampleBrowser/ClientBin/DataServicesQuickStart.html" target="_blank">here</a>.
+            </p>
+        </div>
+    </div>    
+    <my-app>Loading...</my-app>
+  </body>
+
+
+
+	<!-- Wijmo Angular2 -->
+	<script src="scripts/vendor/wijmo.angular2.min.js" type="text/javascript"></script>
+  <script src="scripts/vendor/wijmo.material.js"></script>
+</html>
+
